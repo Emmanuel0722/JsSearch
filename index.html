@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JsSearch</title>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="shortcut icon" href="./img/icon-256x256.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    
+    <a href="https://github.com/Emmanuel0722" target="_blank" >
+      <img src="./img/icon-256x256.png" alt="Logo de la pagina web JsSearch.">
+    </a>
+
+    <button id="myBtn" class="modalBtn">Agregar</button>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <div class="container">
+      <h1>
+        JsSearch
+      </h1>
+
+      <div class="containerSearch">
+        <div class="searchInputContainer">
+          <img src="./img/lupita.png" alt="Buscar Persona">
+          <input type="text" id="searchInput" onkeyup="searchPerson()" placeholder="Introduzca el nombre" maxlength="20" >
+        </div>
+      </div>
+
+      <div class="containerCard" id="containerCardId" ></div>
+
+      <div class="containerButtons">
+
+        <button class="paginetorButton" id="backButton"><</button>
+        <span id="infoPage" ></span>
+        <button class="paginetorButton" id="nextButton">></button>
+
+      </div>
+      
+    </div>
+    
+  </main>
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content" >
+      <span class="close">&times;</span>
+      <div>
+        <form class="addCard" id="formId" >
+          <h2>Introduzca los Datos</h2>
+          <input type="text" id="nameObj" onkeypress="return soloLetras(event)" title="Por favor llene este campo." class="addInput" placeholder="Nombre" required >
+          <input type="text" id="age" onkeypress="return SoloNumeros(event)" title="Por favor llene este campo." maxlength="2" class="addInput" placeholder="Edad" required >
+          <select class="addSelect" name="" id="gene">
+            <option value="" disabled selected >Seleccione un Genero...</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+          <input type="text" id="nac" onkeypress="return soloLetras(event)" title="Por favor llene este campo." class="addInput" placeholder="Nacionalidad" required >
+          <input type="text" id="imgUrl" title="Introduzca la URL de la imagen." class="addInput" placeholder="Introduzca la URL de la imagen." required >
+          <select title="Por favor Seleccione una opcion." id="selectCat" class="addSelect" required name="" id="">
+            <option value="" disabled selected >Seleccione una Profesion...</option>
+            <option value="Deportista">Deportista</option>
+            <option value="Artista">Artista</option>
+            <option value="Ingeniero de Software">Ingeniero de Software</option>
+            <option value="Actor">Actor</option>
+            <option value="Abogado">Abogado</option>
+            <option value="Otros">Otros</option>
+          </select>
+          <!-- <input type="text" class="addInput" placeholder="Profesion" required > -->
+
+          <input type="submit" class="btnAgregar" id="add" value="Agregar">
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <footer>
+    <div class="footer-content contenedor">
+      <div class="contact-us">
+        <h2 class="brand">Emmanuel Design</h2>
+        <p>Somos expertos en hacer realidad tus sueños.</p>
+      </div>
+
+      <div class="social-media">
+        <a href="https://www.facebook.com/enmanuel.acosta1" target="_blank" class="social-media-icon" >
+          <i class='bx bxl-facebook'></i>
+          
+        </a>
+
+        <a href="https://github.com/Emmanuel0722" target="_blank" class="social-media-icon" >
+          <i class='bx bxl-github' ></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="line"></div>
+
+  </footer> -->
+
+  <script src="./index.js"></script>
+</body>
+</html>
